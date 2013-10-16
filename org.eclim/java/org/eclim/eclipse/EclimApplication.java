@@ -74,7 +74,7 @@ public class EclimApplication
         try{
           EclimApplication.shutdown();
         }catch(Exception ex) {
-          logger.error("Error durring shutdown.", ex);
+          logger.error("Error during shutdown.", ex);
         }
       }
     });
