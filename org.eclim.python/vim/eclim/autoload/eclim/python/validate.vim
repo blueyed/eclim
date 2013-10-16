@@ -23,10 +23,11 @@
 " }}}
 
 " Global Variables {{{
-  " if the user has the pyflakes plugin from vim.org, then disable our
-  " validation since the two overlap and may result in errors
+  " If the user has the syntastic plugin from vim.org (formerly pyflakes
+  " plugin), then disable our validation since the two overlap and may result
+  " in errors.
   let s:pyflakes_enabled = 1
-  if exists('g:pyflakes_builtins')
+  if exists('g:loaded_syntastic_plugin') || exists('g:pyflakes_builtins')
     let s:pyflakes_enabled = 0
   endif
 " }}}
